@@ -11,11 +11,7 @@ private Observer = new MutationObserver(function (mutations) {
             for (let i = 0; i < newNodes.length; i++) {
                 if (newNodes[i]['className'].indexOf('wj-dropdown') !== -1
                     && newNodes[i]['className'].indexOf('wj-inputdate') !== -1) {
-                    if (newNodes[i]['style']['zIndex'] === '10900'
-                        && document.querySelector('fwmessagebox')) {
-                        newNodes[i]['style']['zIndex'] = 9999;
-                        i = newNodes.length;
-                    }
+                    // 过滤后业务处理
                 }
             }
         }
@@ -26,10 +22,7 @@ private Observer = new MutationObserver(function (mutations) {
             for (let i = 0; i < removedNodes.length; i++) {
                 if (removedNodes[i]['className'].indexOf('wj-dropdown') !== -1
                     && removedNodes[i]['className'].indexOf('wj-inputdate') !== -1) {
-                    if (removedNodes[0]['style']['zIndex'] === '9999') {
-                        removedNodes[0]['style']['zIndex'] = 10900;
-                        i = removedNodes.length;
-                    }
+                    // 删除节点时再把高度重置
                 }
             }
         }
