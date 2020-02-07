@@ -2,7 +2,7 @@
 
 > 因为工作时遇到了这么一个需求。项目中的datePicker与dataGrid并不是同一套组件，他们显示的层级在弹出errorMessage的情况下，会导致z-index高度过低，无法正确显示层级。为了解决这个问题，我只好在业务页面监听body节点下所有的顶级节点是否有生成目标元素。如果生成，就调低高度(在有errorMessage的情况下)以下为实现的源码。
 
-```
+```typescript
 // Create an observer instance
 private Observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
