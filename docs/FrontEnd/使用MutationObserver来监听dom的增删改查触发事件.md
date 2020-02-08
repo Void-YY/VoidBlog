@@ -1,6 +1,14 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-02-08 13:50:27
+ * @LastEditTime : 2020-02-08 14:41:18
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /VoidBlog/docs/FrontEnd/使用MutationObserver来监听dom的增删改查触发事件.md
+ -->
 ## 使用***MutationObserver***来监听dom的增删改查触发事件
 
-> 因为工作时遇到了这么一个需求。项目中的datePicker与dataGrid并不是同一套组件，他们显示的层级在弹出errorMessage的情况下，会导致z-index高度过低，无法正确显示层级。为了解决这个问题，我只好在业务页面监听body节点下所有的顶级节点是否有生成目标元素。如果生成，就调低高度(在有errorMessage的情况下)以下为实现的源码。
+> 因为工作时遇到了这么一个需求。项目中的datePicker与dataGrid并不是同一套组件，他们显示的层级在弹出errorMessage的情况下，会导致[z-index](/FrontEnd/zIndex的坑)高度过低，无法正确显示层级。为了解决这个问题，我只好在业务页面监听body节点下所有的顶级节点是否有生成目标元素。如果生成，就调低高度(在有errorMessage的情况下)以下为实现的源码。
 
 ```typescript
 // Create an observer instance
