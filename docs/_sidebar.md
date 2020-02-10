@@ -11,5 +11,5 @@
 * [Home](/)
 * [TodoList](/Todo)
 * [FrontEnd](/FrontEnd/FrontEnd.md)
-    * [使用MutationObserver来监听dom触发事件](/FrontEnd/使用MutationObserver来监听dom的增删改查触发事件.md)
+    * [监听DOM：MutationObserver](/FrontEnd/使用MutationObserver来监听dom的增删改查触发事件.md)
     * [zIndex的坑](/FrontEnd/zIndex的坑.md)
