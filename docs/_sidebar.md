@@ -8,7 +8,7 @@
  -->
 <!-- docs/_sidebar.md -->
 
-* [Home](/Readme)
+* [Home](/)
 * [TodoList](/Todo)
 * [Tools](/Tools/Tools.md)
     * [前端快速模拟后端server：Json Server](/Tools/json-server.md)
