@@ -22,11 +22,37 @@
       loadSidebar: true,
       loadNavbar: true,
       coverpage: true,
-      onlyCover: true
+      onlyCover: true,
+      search: {
+        noData: {
+          '/zh-cn/': '没有结果!',
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': 'Search'
+        }
+      },
+      markdown: {
+        smartypants: true,
+        renderer: {
+          code: function (code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + mermaid.render(lang, code) + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- search -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <!-- Render: Code -->
   <script src="//unpkg.com/prismjs/components/prism-typescript.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
